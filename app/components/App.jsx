@@ -1,13 +1,17 @@
 import React from 'react';
 import Todos from './Todos';
-import { Provider } from 'react-redux'
-import store from '../store'
+import { Provider } from 'react-redux';
+import store from '../store';
+import DevTools from './DevTools';
 
 export default React.createClass({
   render() {
     return (
 	  <Provider store={store}>
-	    <Todos />
+	  	<div>
+		    <Todos />
+		    <DevTools/>
+	    </div>
 	  </Provider>
     );
   }
