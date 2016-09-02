@@ -1,10 +1,25 @@
-import React from 'react';
+import React from 'react'
+import { connect } from 'react-redux'
 
-export default React.createClass({
-  render() {
-    return (
-      <div>Hello from todos!!</div>
-      
-    );
+import NewTodo from './NewTodo'
+import { addTodo } from '../actions'
+
+const Todos = ({todos, dispatch}) => (
+  <div>
+    <h1>Todos</h1>
+    <NewTodo onChange={e => {
+						      if(e.keyCode == 13){
+						        dispatch(addTodo(e.target.value))
+						        e.target.value = ''
+						      }}}/>
+    {todos.map(todo => <p key={todo}>{todo}</p>)}
+  </div>
+)
+
+function mapStateToProps(todos) {
+  return {
+    todos
   }
-});
+}
+
+export default connect(mapStateToProps)(Todos)
