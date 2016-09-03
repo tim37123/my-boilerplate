@@ -28,6 +28,9 @@ module.exports = {
 	},
 	//Add the got module replacement plugin
 	plugins: [
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
+	    new webpack.DefinePlugin({
+	      'DEVELOPMENT': true //set it to true in dev mode
+	    })
 	]
 };

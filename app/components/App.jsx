@@ -10,7 +10,7 @@ export default React.createClass({
 	  <Provider store={store}>
 	  	<div>
 		    <Todos />
-		    <DevTools/>
+		    { DEVELOPMENT ? <DevTools/> : ''}
 	    </div>
 	  </Provider>
     );
