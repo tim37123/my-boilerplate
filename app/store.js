@@ -1,4 +1,4 @@
-import { createStore, compose, applyMiddleware } from 'redux';
+import { createStore, compose, applyMiddleware, combineReducers } from 'redux';
 import DevTools from './components/DevTools';
 import todos from './reducers/todos';
 import Immutable from 'immutable';
