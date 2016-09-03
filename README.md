@@ -15,3 +15,5 @@ This is partly to make future dev easier and partly to get a deeper understandin
 [] Sagas (Implement Sagas Middleware)
 
 [] Testing (TBD what tool)
+
+[] Firebase Auth
