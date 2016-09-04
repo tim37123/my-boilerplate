@@ -6,12 +6,12 @@ import App from './components/App';
 import About from './components/About';
 import Todos from './components/Todos';
 import DevTools from './components/DevTools';
-import store from './store';
+import {store, history} from './redux-router-init';
 
 ReactDOM.render(
 	<Provider store={store}>
 		<div>
-		<Router history={hashHistory}>
+		<Router history={history}>
 			<Route path="/" component={App}>
 				<IndexRoute component={Todos}/>
 				<Route path="/about" component={About}/>
@@ -22,4 +22,4 @@ ReactDOM.render(
 		</div>
 	</Provider>,
 	document.getElementById('root')
-);
+);n
