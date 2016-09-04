@@ -1,23 +1,13 @@
-import React from 'react';
-import Todos from './Todos';
-import About from './About';
-import { Provider } from 'react-redux';
-import store from '../store';
-import DevTools from './DevTools';
-import { Router, Route, hashHistory } from 'react-router'
+import React from 'react'
 
 export default React.createClass({
-  render() {
+  render: function() {
     return (
-	  <Provider store={store}>
-	  	<div>
-	  	  <Router history={hashHistory}>
-		    <Route path="/" component={Todos}/>
-		    <Route path="/about" component={About}/>
-		  </Router>
-		    { DEVELOPMENT ? <DevTools/> : ''}
-	    </div>
-	  </Provider>
+      <div >
+        Hello, world!!! This is the App
+
+        {this.props.children}
+      </div>
     );
   }
 });
