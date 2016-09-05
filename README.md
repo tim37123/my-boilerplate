@@ -12,7 +12,7 @@ This is partly to make future dev easier and partly to get a deeper understandin
 
 [X] Redux + Router + ImmutableJS (Redux and React-Router with full feature integration: DevTools, History integration, etc)
 
-[] Sagas (Implement Sagas Middleware)
+[X] Sagas (Implement Sagas Middleware)
 
 [] Testing (TBD what tool)
 
