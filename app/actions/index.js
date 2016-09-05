@@ -4,10 +4,3 @@ export function addTodo(todo){
     todo
   }
 }
-
-export function deleteTodo(index){
-  return {
-    type: 'deleteTodo',
-    index
-  }
-}

@@ -9,9 +9,10 @@ import Todo from './Todo';
 const Todos = ({todos, dispatch}) => (
   <div>
     <h1>Todos</h1>
+    <h4>NOTE: Sagas is being used to delay dispach of new todos by 1 second</h4>
     <NewTodo onChange={e => {
 						      if(e.keyCode == 13){
-						        dispatch(addTodo(e.target.value))
+						        dispatch({type: 'ADD_TODO_ASYNC', todo: e.target.value})
 						        e.target.value = ''
 						      }}}/>
     {todos.map(todo => <Todo key={todo} item={todo}></Todo>)}

@@ -7,7 +7,7 @@ import { hashHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import createLogger from 'redux-logger';
 import DevTools from './components/DevTools';
-import { helloSaga } from './sagas';
+import rootSaga from './sagas';
 
 /* Internal dependencies */
 import todoReducer from './reducers/todos';
@@ -39,7 +39,7 @@ const store = createStore(
   )
 );
 
-sagaMiddleware.run(helloSaga);
+sagaMiddleware.run(rootSaga);
 
 /* Create enhanced history object for router */
 const createSelectLocationState = () => {
