@@ -8,9 +8,9 @@ This is partly to make future dev easier and partly to get a deeper understandin
 ###Checklist
 **Each item will build upon the previous**
 
-[x] Base Boilerplate (webpack, react, eslint, babel, folder structure)
+[X] Base Boilerplate (webpack, react, eslint, babel, folder structure)
 
-[] Redux + Router (Redux and React-Router with full feature integration: DevTools, History integration, etc)
+[X] Redux + Router (Redux and React-Router with full feature integration: DevTools, History integration, etc)
 
 [] Sagas (Implement Sagas Middleware)
 
