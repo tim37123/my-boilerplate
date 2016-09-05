@@ -2,10 +2,12 @@
 import { combineReducers } from 'redux-immutable';
 import Immutable from 'immutable';
 import { createStore, compose, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 import { hashHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import createLogger from 'redux-logger';
 import DevTools from './components/DevTools';
+import { helloSaga } from './sagas';
 
 /* Internal dependencies */
 import todoReducer from './reducers/todos';
@@ -25,15 +27,19 @@ const rootReducer = combineReducers({
 // const initialState = Immutable.List(['Code More!']);
 const initialState = Immutable.Map();
 const logger = createLogger();
+const sagaMiddleware = createSagaMiddleware()
 
 const store = createStore(
   rootReducer,
   initialState,
   compose(
     applyMiddleware(logger),
+    applyMiddleware(sagaMiddleware),
     DevTools.instrument()
   )
 );
+
+sagaMiddleware.run(helloSaga);
 
 /* Create enhanced history object for router */
 const createSelectLocationState = () => {

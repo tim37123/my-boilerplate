@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import NewTodo from './NewTodo'
 import { addTodo } from '../actions'
 
+import Todo from './Todo';
+
 const Todos = ({todos, dispatch}) => (
   <div>
     <h1>Todos</h1>
@@ -12,7 +14,7 @@ const Todos = ({todos, dispatch}) => (
 						        dispatch(addTodo(e.target.value))
 						        e.target.value = ''
 						      }}}/>
-    {todos.map(todo => <p key={todo}>{todo}</p>)}
+    {todos.map(todo => <Todo key={todo} item={todo}></Todo>)}
   </div>
 )
 
