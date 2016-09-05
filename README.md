@@ -10,7 +10,7 @@ This is partly to make future dev easier and partly to get a deeper understandin
 
 [X] Base Boilerplate (webpack, react, eslint, babel, folder structure)
 
-[X] Redux + Router (Redux and React-Router with full feature integration: DevTools, History integration, etc)
+[X] Redux + Router + ImmutableJS (Redux and React-Router with full feature integration: DevTools, History integration, etc)
 
 [] Sagas (Implement Sagas Middleware)
 
