@@ -22,7 +22,8 @@ const rootReducer = combineReducers({
     routing: routerReducer
 })
 
-const initialState = Immutable.List(['Code More!']);
+// const initialState = Immutable.List(['Code More!']);
+const initialState = Immutable.Map();
 const logger = createLogger();
 
 const store = createStore(

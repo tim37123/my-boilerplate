@@ -16,9 +16,9 @@ const Todos = ({todos, dispatch}) => (
   </div>
 )
 
-function mapStateToProps(todos) {
+function mapStateToProps(state) {
   return {
-    todos
+    todos: state.get('todos')
   }
 }
 
