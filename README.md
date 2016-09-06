@@ -14,6 +14,6 @@ This is partly to make future dev easier and partly to get a deeper understandin
 
 [X] Sagas (Implement Sagas Middleware)
 
-[] Testing (TBD what tool)
+[x] Testing (added Tape to test sagas, need to expand it)
 
 [] Firebase Auth
