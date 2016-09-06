@@ -1,8 +1,8 @@
 import { takeEvery, delay } from 'redux-saga';
-import { put } from 'redux-saga/effects';
+import { put, call } from 'redux-saga/effects'
 
 export function* addTodoAsync(action){
-	yield delay(1000)
+	yield call(delay, 1000)
 	yield put({type: 'addTodo', todo: action.todo})
 }
 
