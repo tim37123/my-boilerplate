@@ -1,10 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import NewTodo from '../containers/NewTodo'
+import NewTodo from '../components/NewTodo'
 import { addTodo } from '../actions'
 
-import Todo from '../containers/Todo';
+import Todo from '../components/Todo';
 
 const Todos = ({todos, dispatch}) => (
   <div>

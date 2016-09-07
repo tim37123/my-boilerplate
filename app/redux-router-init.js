@@ -6,7 +6,7 @@ import createSagaMiddleware from 'redux-saga';
 import { hashHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import createLogger from 'redux-logger';
-import DevTools from './components/DevTools';
+import DevTools from './containers/DevTools';
 import rootSaga from './sagas';
 
 /* Internal dependencies */
