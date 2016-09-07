@@ -4,7 +4,7 @@ import "babel-polyfill";
 import {Provider} from 'react-redux';
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import App from './components/App';
-import About from './components/About';
+import About from './containers/About';
 import Todos from './components/Todos';
 import DevTools from './components/DevTools';
 import {store, history} from './redux-router-init';
