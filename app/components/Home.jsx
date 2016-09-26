@@ -3,11 +3,10 @@ import React from 'react'
 export default React.createClass({
   render: function() {
     return (
-      <div >
-        Hello, world!!! This is the App
-
-        {this.props.children}
-      </div>
+      <div class="jumbotron">
+		  <h1>Welcome home!</h1>
+		  <p>This is the home component</p>
+	  </div>
     );
   }
 });

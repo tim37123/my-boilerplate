@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import NewTodo from '../containers/NewTodo'
-import { addTodo } from '../actions'
 
 import Todo from '../components/Todo'
 
