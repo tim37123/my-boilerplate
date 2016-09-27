@@ -9,7 +9,7 @@ class Navbar extends Component {
 
 	logout(){
 		console.log('logout button clicked')
-		this.props.dispatch({type: 'LOGOUT_ASYNC'})
+		this.props.dispatch({type: 'LOGOUT_USER'})
 	}
 
 	render(){

@@ -12,7 +12,7 @@ class Login extends Component {
     e.preventDefault()
     let userEmail = this.refs.inputEmail.value
     let userPassword = this.refs.inputPassword.value
-    this.props.dispatch({type: 'LOGIN_ASYNC', creds: {email: userEmail, password: userPassword}})
+    this.props.dispatch({type: 'LOGIN_USER', creds: {email: userEmail, password: userPassword}})
     userEmail = ''
     userPassword = ''
   }
