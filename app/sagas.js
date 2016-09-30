@@ -17,37 +17,32 @@ export function* watchSetUser(){
 
 
 export function* setUser(action){
-	yield* put({type: 'SET_USER', user: action.user})
+	yield put({type: 'SET_USER', user: action.user})
 }
 
 export function* watchClearUser(){
 	yield* takeEvery('CLEAR_USER', clearUser)
 }
 
-export function* clearUser(action){
-	yield* put({type: 'CLEAR_USER'});
+export function* clearUser(){
+	yield put({type: 'CLEAR_USER'});
 }
 
 export function* watchRegister(){
 	yield* takeEvery('REGISTER_USER', register)
 }
 
-function* registerFailedHelper(response){
-	yield put({type: 'REGISTRATION_FAILED', message: {msg_type: 'error', msg_body: response.errorMessage}})
-}
-
 export function* register(action){
-	console.log("RegisterUserSaga Called")
     const {error, user} = yield call(Firebaseutils.registerUser,action.creds);
     error ? yield put({type: 'REGISTRATION_FAILED', message: {msg_type: 'error', msg_body: error.message}})
-	      : yield put({type: 'REGISTRATER', user});
+	      : yield put({type: 'REGISTER', user});
 }
 
 export function* watchLogout(){
 	yield* takeEvery('LOGOUT_USER', logout)
 }
 
-export function* logout(action){
+export function* logout(){
     const {error, success} = yield call(Firebaseutils.logout);
     error ? yield put({type: 'LOGOUT_FAILED', message: {msg_type: 'error', msg_body: error.message}})
 	      : yield put({type: 'LOGOUT'});
