@@ -1,9 +1,9 @@
 import test from 'tape';
-import Firebaseutils from './utils/firebaseUtils';
+import Firebaseutils from '../utils/firebaseUtils';
 
 import { put, call } from 'redux-saga/effects'
 import { delay } from 'redux-saga'
-import { addTodoAsync, register, login, logout, setUser, clearUser } from './sagas'
+import { addTodoAsync, register, login, logout, setUser, clearUser } from '../sagas'
 
 test('addTodoAsync Saga test', (assert) => {
 	const gen = addTodoAsync({type: 'addTodo', todo: 'hello world!'});

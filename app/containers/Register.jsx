@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 
-class Register extends Component {
+export class Register extends Component {
 	constructor(props){
 		super(props);
 		this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -11,7 +11,7 @@ class Register extends Component {
 		event.preventDefault();
 		var email = this.refs.email.value;
 		var password = this.refs.password.value;
-		this.props.dispatch({type: 'REGISTER_USER', creds: {'email': email, 'password': password}})
+		this.props.dispatch({type: 'REGISTER_USER_ASYNC', creds: {'email': email, 'password': password}})
 	}
 
 	render(){

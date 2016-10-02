@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
 
-class Navbar extends Component {
+export class Navbar extends Component {
 	constructor(props){
 		super(props);
 	}
 
 	logout(){
 		console.log('logout button clicked')
-		this.props.dispatch({type: 'LOGOUT_USER'})
+		this.props.dispatch({type: 'LOGOUT_USER_ASYNC'})
 	}
 
 	render(){

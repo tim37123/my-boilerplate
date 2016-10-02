@@ -12,7 +12,7 @@ export function* addTodoAsync(action){
 }
 
 export function* watchSetUser(){
-	yield* takeEvery('SET_USER', setUser)
+	yield* takeEvery('SET_USER_ASYNC', setUser)
 }
 
 
@@ -21,7 +21,7 @@ export function* setUser(action){
 }
 
 export function* watchClearUser(){
-	yield* takeEvery('CLEAR_USER', clearUser)
+	yield* takeEvery('CLEAR_USER_ASYNC', clearUser)
 }
 
 export function* clearUser(){
@@ -29,7 +29,7 @@ export function* clearUser(){
 }
 
 export function* watchRegister(){
-	yield* takeEvery('REGISTER_USER', register)
+	yield* takeEvery('REGISTER_USER_ASYNC', register)
 }
 
 export function* register(action){
@@ -39,7 +39,7 @@ export function* register(action){
 }
 
 export function* watchLogout(){
-	yield* takeEvery('LOGOUT_USER', logout)
+	yield* takeEvery('LOGOUT_USER_ASYNC', logout)
 }
 
 export function* logout(){
@@ -49,7 +49,7 @@ export function* logout(){
 }
 
 export function* watchLogin(){
-	yield* takeEvery('LOGIN_USER', login)
+	yield* takeEvery('LOGIN_USER_ASYNC', login)
 }
 
 export function* login(action){

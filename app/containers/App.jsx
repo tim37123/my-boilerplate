@@ -12,9 +12,9 @@ class App extends Component {
   	let dispatch = this.props.dispatch;
   	Firebaseutils.authChanged(function(user){
   		if(user){
-  			dispatch({type: 'SET_USER', user: user})
+  			dispatch({type: 'SET_USER_ASYNC', user: user})
   		}else{
-  			dispatch({type: 'CLEAR_USER'})
+  			dispatch({type: 'CLEAR_USER_ASYNC'})
   		}
 	  });
   }

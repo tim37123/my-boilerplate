@@ -3,7 +3,7 @@ import Navbar from '../containers/Navbar'
 import Firebaseutils from '../utils/firebaseUtils';
 import {connect} from 'react-redux'
 
-class Login extends Component {
+export class Login extends Component {
 	constructor(props){
 		super(props);
 	}
@@ -12,7 +12,7 @@ class Login extends Component {
     e.preventDefault()
     let userEmail = this.refs.inputEmail.value
     let userPassword = this.refs.inputPassword.value
-    this.props.dispatch({type: 'LOGIN_USER', creds: {email: userEmail, password: userPassword}})
+    this.props.dispatch({type: 'LOGIN_USER_ASYNC', creds: {email: userEmail, password: userPassword}})
     userEmail = ''
     userPassword = ''
   }
