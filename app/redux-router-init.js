@@ -10,6 +10,7 @@ import DevTools from './components/DevTools';
 /* Internal dependencies */
 import todoReducer from './reducers/todos';
 import routerReducer from './reducers/router-reducer';
+import alertsReducer from './reducers/alerts-reducer';
 
 ////////////////////////////////////////////////
 
@@ -19,7 +20,8 @@ import routerReducer from './reducers/router-reducer';
  */
 const rootReducer = combineReducers({
     todos: todoReducer,
-    routing: routerReducer
+    routing: routerReducer,
+    alerts: alertsReducer
 })
 
 // const initialState = Immutable.List(['Code More!']);
